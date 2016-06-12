@@ -1,3 +1,3 @@
 # BindSocketDemo
 
-This is a demo project for multi-networking APIs in Android M.
+This is a demo project for the multi-networking APIs in Android M.
