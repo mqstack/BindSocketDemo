@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="clickEvent"
+            type="org.mqstack.bindsocket.util.ClickEvent" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_bind_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{clickEvent.onClick}"
+            android:text="Bind Socket Demo" />
+
+        <Button
+            android:id="@+id/button_image_loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{clickEvent.onClick}"
+            android:text="ImageLoader Demo" />
+
+    </LinearLayout>
+</layout>
