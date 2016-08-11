@@ -16,13 +16,13 @@ import okhttp3.OkHttpClient;
 /**
  * A simple model loader for fetching media over http/https using OkHttp.
  */
-public class OkHttpUrlLoader implements ModelLoader<GlideCameraUrl, InputStream> {
+public class OkHttpUrlLoader implements ModelLoader<GlideCustomUrl, InputStream> {
 
 
     /**
      * The default factory for {@link OkHttpUrlLoader}s.
      */
-    public static class Factory implements ModelLoaderFactory<GlideCameraUrl, InputStream> {
+    public static class Factory implements ModelLoaderFactory<GlideCustomUrl, InputStream> {
         private static volatile OkHttpClient internalClient;
         private OkHttpClient client;
 
@@ -52,7 +52,7 @@ public class OkHttpUrlLoader implements ModelLoader<GlideCameraUrl, InputStream>
         }
 
         @Override
-        public ModelLoader<GlideCameraUrl, InputStream> build(Context context, GenericLoaderFactory factories) {
+        public ModelLoader<GlideCustomUrl, InputStream> build(Context context, GenericLoaderFactory factories) {
             return new OkHttpUrlLoader(client);
         }
 
@@ -70,7 +70,7 @@ public class OkHttpUrlLoader implements ModelLoader<GlideCameraUrl, InputStream>
 
 
     @Override
-    public DataFetcher<InputStream> getResourceFetcher(GlideCameraUrl model, int width, int height) {
+    public DataFetcher<InputStream> getResourceFetcher(GlideCustomUrl model, int width, int height) {
         return new OkHttpStreamFetcher(client, model);
     }
 }

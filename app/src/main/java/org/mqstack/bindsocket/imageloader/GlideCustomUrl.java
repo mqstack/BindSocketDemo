@@ -8,21 +8,21 @@ import java.net.URL;
 /**
  * Created by mqstack on 2016/1/20.
  */
-public class GlideCameraUrl extends GlideUrl {
+public class GlideCustomUrl extends GlideUrl {
 
-    public GlideCameraUrl(URL url) {
+    public GlideCustomUrl(URL url) {
         super(url);
     }
 
-    public GlideCameraUrl(String url) {
+    public GlideCustomUrl(String url) {
         super(url);
     }
 
-    public GlideCameraUrl(URL url, Headers headers) {
+    public GlideCustomUrl(URL url, Headers headers) {
         super(url, headers);
     }
 
-    public GlideCameraUrl(String url, Headers headers) {
+    public GlideCustomUrl(String url, Headers headers) {
         super(url, headers);
     }
 

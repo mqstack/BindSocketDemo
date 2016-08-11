@@ -110,7 +110,6 @@ public class BindNetActivity extends AppCompatActivity {
             connManager.registerNetworkCallback(request.build(), new ConnectivityManager.NetworkCallback() {
                 @Override
                 public void onAvailable(Network network) {
-//                    connManager.bindProcessToNetwork(network);
                     NetworkUtil.setNetwork(BindNetActivity.this, network);
                     L.d("bind network " + network.toString());
                 }

@@ -18,7 +18,7 @@ import okhttp3.ResponseBody;
  */
 public class OkHttpStreamFetcher implements DataFetcher<InputStream> {
     private final OkHttpClient client;
-    private final GlideCameraUrl url;
+    private final GlideCustomUrl url;
     private InputStream stream;
     private ResponseBody responseBody;
 
@@ -26,7 +26,7 @@ public class OkHttpStreamFetcher implements DataFetcher<InputStream> {
 
     private int tryTime = 0;
 
-    public OkHttpStreamFetcher(OkHttpClient client, GlideCameraUrl url) {
+    public OkHttpStreamFetcher(OkHttpClient client, GlideCustomUrl url) {
         this.client = client;
         this.url = url;
     }

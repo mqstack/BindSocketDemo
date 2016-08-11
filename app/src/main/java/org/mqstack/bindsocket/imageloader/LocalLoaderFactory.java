@@ -13,10 +13,10 @@ import java.io.InputStream;
 /**
  * Created by mqstack on 2016/1/20.
  */
-public class LocalLoaderFactory implements ModelLoaderFactory<GlideCameraUrl, InputStream> {
+public class LocalLoaderFactory implements ModelLoaderFactory<GlideCustomUrl, InputStream> {
 
     @Override
-    public ModelLoader<GlideCameraUrl, InputStream> build(Context context, GenericLoaderFactory factories) {
+    public ModelLoader<GlideCustomUrl, InputStream> build(Context context, GenericLoaderFactory factories) {
         return new OkHttpUrlLoader(BindedHttpClient.getInstance().client);
     }
 

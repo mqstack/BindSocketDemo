@@ -42,11 +42,11 @@ public class ImageLoader {
     }
 
     public static void initGlide(Context context) {
-        Glide.get(context).register(GlideCameraUrl.class, InputStream.class, new LocalLoaderFactory());
+        Glide.get(context).register(GlideCustomUrl.class, InputStream.class, new LocalLoaderFactory());
     }
 
     public static void loadLocalImage(Context context, String imageUri, ImageView imageView) {
-        Glide.with(context).load(new GlideCameraUrl(imageUri)).into(imageView);
+        Glide.with(context).load(new GlideCustomUrl(imageUri)).into(imageView);
     }
 
     public static void loadNetImage(Context context, String imageUri, ImageView imageView) {
